@@ -1,24 +1,33 @@
-# Trading Journal & Analytics Platform (Python + Pandas)
+# Trading Journal & Analytics Platform (Python + Streamlit)
 
 ## Overview
-This project is a Python-based trading journal that analyzes real trading data exported from Tradovate. It processes raw trade history and generates performance metrics to help evaluate trading behavior, profitability, and risk exposure.
+This project is an interactive trading journal that analyzes real trading data exported from Tradovate. It processes raw trade history and generates performance metrics, visual analytics, and interactive dashboards to evaluate trading performance and risk.
 
-The goal is to turn raw broker data into actionable insights using data analysis tools.
+The project demonstrates data cleaning, financial analysis, and web app development using Python.
+
+---
+
+## Live Demo
+
+👉 https://trading-journal-python.streamlit.app
+
+Upload your own Tradovate CSV file to generate real-time trading analytics.
 
 ---
 
 ## Key Features
 
-- Loads and processes Tradovate CSV trade exports
-- Cleans and validates trading data using pandas
-- Calculates core performance metrics:
+- Upload and analyze Tradovate CSV files
+- Cleans and processes raw trading data using pandas
+- Calculates key performance metrics:
   - Total profit/loss
   - Win rate
-  - Average win and average loss
   - Profit factor
-- Builds equity curve over time
-- Groups and analyzes daily performance
-- Identifies best and worst trades
+  - Average win and loss
+- Interactive equity curve visualization
+- Daily PnL analysis
+- Full trade data table view
+- Web-based dashboard (Streamlit)
 
 ---
 
@@ -26,6 +35,7 @@ The goal is to turn raw broker data into actionable insights using data analysis
 
 - Python
 - Pandas
+- Streamlit
 
 ---
 
@@ -33,61 +43,54 @@ The goal is to turn raw broker data into actionable insights using data analysis
 
 TradingJournal/
 │
-├── data/
-│   └── pa_account.csv        (NOT uploaded to GitHub)
-│
 ├── src/
-│   └── analysis.py
+│   └── app.py              # Streamlit dashboard application
 │
-├── requirements.txt
-└── README.md
+├── requirements.txt       # Project dependencies
+└── README.md              # Project documentation
 
 ---
 
-## How to Run
+## How to Run Locally
 
 ### 1. Install dependencies
 pip install -r requirements.txt
 
-### 2. Run the analysis
-python src/analysis.py
+### 2. Run Streamlit app
+python -m streamlit run src/app.py
 
 ---
 
-## Example Output
+## Example Features in Dashboard
 
-=== TRADING SUMMARY ===
-Total Trades: 243
-Total Profit: 5421.50
-Win Rate: 58.40%
-Profit Factor: 1.67
-
-Big Win: 320.00
-Big Loss: -180.00
+- Equity curve (performance over time)
+- Daily profit/loss tracking
+- Win rate and profit factor metrics
+- Interactive trade table
+- CSV upload functionality
 
 ---
 
 ## What I Learned From This Project
 
-- Data cleaning and preprocessing with pandas
-- Working with real-world financial datasets
-- Handling missing and inconsistent data formats
+- Data cleaning and preprocessing using pandas
+- Handling real-world financial datasets
 - Time series analysis using timestamps
-- Calculating performance and risk metrics
-- Structuring a Python analytics project
+- Building interactive dashboards with Streamlit
+- Turning scripts into deployable web applications
 
 ---
 
 ## Future Improvements
 
-- Add interactive dashboard using Streamlit
-- Add trade tagging (breakout, reversal, trend)
-- Visual charts (equity curve, drawdown)
-- Automated PDF performance reports
+- Add drawdown and risk metrics (prop firm style analysis)
+- Trade tagging (breakout, reversal, trend classification)
+- Sharpe ratio and volatility metrics
 - Multi-account support
+- Automated PDF performance reports
 
 ---
 
 ## Note
 
-This project uses personal trading data exported from Tradovate and is intended for educational and performance analysis purposes.
+This project uses personal trading data exported from Tradovate and is intended for educational and analytical purposes only.
