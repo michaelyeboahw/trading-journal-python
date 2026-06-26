@@ -1,0 +1,2 @@
+symbol,_priceFormat,_priceFormatType,_tickSize,buyFillId,sellFillId,qty,buyPrice,sellPrice,pnl,boughtTimestamp,soldTimestamp,duration
+MNQU6,-2,0,0.25,556781970030,556781970053,9,29661.25,29605.25,"$(1,008.00)",06/25/2026 20:27:44,06/25/2026 21:05:07,37min 22sec
